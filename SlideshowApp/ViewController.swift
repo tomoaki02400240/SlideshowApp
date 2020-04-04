@@ -60,15 +60,21 @@ class ViewController: UIViewController {
         let image = UIImage(named: name)
         imageLabel.image = image
     }
+    @IBAction func ontapImage(_ sender: Any) {
+        performSegue(withIdentifier: "result", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        resultViewController.imageImage = imageLabel.image
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imageLabel.image = image
     }
-    @IBAction func onTapImage(_ sender: Any) {
-        performSegue(withIdentifier: "result", sender: nil)
-    }
+   
     
     @IBAction func unwind(_ segue: UIStoryboardSegue){
         

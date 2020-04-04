@@ -9,11 +9,21 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    var imageImage: UIImage!
+    
+    
+    
     override func viewDidLoad() {
+      
+        
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
+        imageLabel.image = imageImage
     }
     
 
@@ -26,5 +36,6 @@ class ResultViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBOutlet weak var imageLabel: UIImageView!
+    
 }
